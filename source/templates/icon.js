@@ -6,6 +6,7 @@ const html = `
 
 const css = `
 span {
+    font-size: var(--icon-size, inherit);
     color: var(--icon-color, inherit);
     position: relative;
 }
