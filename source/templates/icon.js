@@ -1,7 +1,7 @@
 import { template } from '../../references/quantum.js';
 
 const html = `
-<span id="icon"></span>
+<span></span>
 `;
 
 const css = `
@@ -9,13 +9,13 @@ const css = `
     display: inline-block;
 }
 
-#icon {
+span {
     color: var(--icon-color, inherit);
+    line-height: var(--icon-size, normal);
+    width: var(--icon-size, 1em);
     display: inline-block;
     position: relative;
     text-align: center;
-    line-height: var(--icon-size, 1em);
-    width: var(--icon-size, 1em);
 }
 `;
 
