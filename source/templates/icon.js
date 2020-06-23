@@ -14,8 +14,8 @@ const css = `
     display: inline-block;
     position: relative;
     text-align: center;
-    line-height: 1em;
-    width: 1em;
+    line-height: var(--icon-size, 1em);
+    width: var(--icon-size, 1em);
 }
 `;
 
