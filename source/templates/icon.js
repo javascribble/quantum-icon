@@ -6,8 +6,7 @@ const html = `
 
 const css = `
 span {
-    font-size: var(--quantum-icon-size);
-    color: var(--quantum-icon-color);
+    font-size: var(--quantum-icon-font-size);
     position: relative;
 }
 `;
