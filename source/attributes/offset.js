@@ -1,6 +1,6 @@
-import { query } from '../../references/quantum.js';
+import { querySelector } from '../../references/quantum.js';
 
 export const offset = root => {
-    const span = query(root, 'span');
+    const span = querySelector(root, 'span');
     return value => span.style.top = value;
 };
