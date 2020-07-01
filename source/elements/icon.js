@@ -1,4 +1,4 @@
-import { Quantum, define, querySelector } from '../../references/quantum.js';
+import { Quantum, defineElement, querySelector } from '../../references/quantum.js';
 import { icon } from '../templates/icon.js';
 
 export class Icon extends Quantum {
@@ -17,4 +17,4 @@ export class Icon extends Quantum {
     }
 }
 
-define(Icon);
+defineElement(Icon);
