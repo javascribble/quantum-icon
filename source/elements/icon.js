@@ -1,4 +1,4 @@
-import { Quantum, defineElement, querySelector } from '../../references/quantum.js';
+import { Quantum, define } from '../../references/quantum.js';
 import { icon } from '../templates/icon.js';
 
 export class Icon extends Quantum {
@@ -12,9 +12,9 @@ export class Icon extends Quantum {
     };
 
     initializeShadowCallback(shadow) {
-        shadow.icon = querySelector(shadow, 'span');
+        shadow.icon = shadow.querySelector('span');
         super.initializeShadowCallback(shadow);
     }
 }
 
-defineElement(Icon);
+define(Icon);
