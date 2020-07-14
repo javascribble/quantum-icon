@@ -1,5 +1,4 @@
 import { Component } from '../../references/quantum.js';
-import { icon } from '../templates/icon.js';
 
 export class Icon extends Component {
     #icon;
@@ -10,7 +9,7 @@ export class Icon extends Component {
         this.#icon = this.shadowRoot.querySelector('span');
     }
 
-    static template = icon;
+    static template = document.querySelector('#quantum-icon');
 
     static attributes = ['code', 'offset'];
 
