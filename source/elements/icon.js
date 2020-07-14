@@ -1,20 +1,26 @@
-import { Quantum, define } from '../../references/quantum.js';
+import { Component } from '../../references/quantum.js';
 import { icon } from '../templates/icon.js';
 
-export class Icon extends Quantum {
+export class Icon extends Component {
+    #icon;
+
     constructor() {
-        super(icon);
+        super();
+
+        this.#icon = this.shadowRoot.querySelector('span');
     }
 
-    static attributes = {
-        code: shadow => value => shadow.icon.innerHTML = `&${value};`,
-        offset: shadow => value => shadow.icon.style.top = value
-    };
+    static template = icon;
 
-    initializeShadowCallback(shadow) {
-        shadow.icon = shadow.querySelector('span');
-        super.initializeShadowCallback(shadow);
+    static attributes = ['code', 'offset'];
+
+    codeChangedCallback(value) {
+        this.#icon.innerHTML = `&${value};`;
+    }
+
+    offsetChangedCallback(value) {
+        this.#icon.style.top = value;
     }
 }
 
-define(Icon);
+customElements.define('quantum-icon', Icon);

@@ -1,14 +1,11 @@
 import { template } from '../../references/quantum.js';
 
-const html = `
+export const icon = template(`
+<style>
+    span {
+        font-size: var(--quantum-icon-font-size);
+        position: relative;
+    }
+</style>
 <span></span>
-`;
-
-const css = `
-span {
-    font-size: var(--quantum-icon-font-size);
-    position: relative;
-}
-`;
-
-export const icon = template(html, css);
+`);
