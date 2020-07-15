@@ -3,9 +3,10 @@
     "description": "",
     "version": "0.4.3",
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+		"@javascribble/quantum": "^0.4.5"
+	},
     "devDependencies": {
-        "@javascribble/quantum": "^0.4.5",
         "live-server": "*"
     },
     "scripts": {
