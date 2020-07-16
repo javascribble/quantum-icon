@@ -1,6 +1,6 @@
-:root {
-    --quantum-icon-font-size: normal;
-    --quantum-icon-position: relative;
+quantum-icon {
+    --font-size: normal;
+    --position: relative;
 }
 
 body {

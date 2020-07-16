@@ -1,8 +1,8 @@
 export default `
 <style>
     span {
-        font-size: var(--quantum-icon-font-size);
-        position: var(--quantum-icon-position);
+        font-size: var(--font-size);
+        position: var(--position);
     }
 </style>
 <span></span>
