@@ -1,8 +1,9 @@
+body {
+    visibility: hidden;
+    margin: 0;
+}
+
 quantum-icon {
     --font-size: normal;
     --position: relative;
-}
-
-body {
-    margin: 0;
 }
