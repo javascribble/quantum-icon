@@ -1,7 +1,6 @@
-import { Component, template } from '../../references/quantum.js';
 import html from '../templates/icon.js';
 
-export class Icon extends Component {
+export class Icon extends quantum.Component {
     #icon;
 
     constructor() {
@@ -10,17 +9,20 @@ export class Icon extends Component {
         this.#icon = this.shadowRoot.querySelector('span');
     }
 
-    static template = template(html);
+    static template = quantum.template(html);
 
-    static attributes = ['code', 'offset'];
+    static get observedAttributes() { return ['code', 'offset']; }
 
-    codeChangedCallback(value) {
-        this.#icon.innerHTML = `&${value};`;
-    }
-
-    offsetChangedCallback(value) {
-        this.#icon.style.top = value;
+    attributeChangedCallback(attribute, previousValue, currentValue) {
+        switch (attribute) {
+            case 'code':
+                this.#icon.innerHTML = `&${currentValue};`;
+                break;
+            case 'offset':
+                this.#icon.style.top = currentValue;
+                break;
+        }
     }
 }
 
-customElements.define('quantum-icon', Icon);
+quantum.define('quantum-icon', Icon);
