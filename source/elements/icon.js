@@ -1,6 +1,7 @@
+import { Component, template, define } from '../import.js';
 import html from '../templates/icon.js';
 
-export class Icon extends quantum.Component {
+export class Icon extends Component {
     #icon;
 
     constructor() {
@@ -9,7 +10,7 @@ export class Icon extends quantum.Component {
         this.#icon = this.shadowRoot.querySelector('span');
     }
 
-    static template = quantum.template(html);
+    static template = template(html);
 
     static get observedAttributes() { return ['code', 'offset']; }
 
@@ -25,4 +26,4 @@ export class Icon extends quantum.Component {
     }
 }
 
-quantum.define('quantum-icon', Icon);
+define('quantum-icon', Icon);
