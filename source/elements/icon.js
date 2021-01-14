@@ -14,15 +14,12 @@ export class Icon extends Component {
 
     static get observedAttributes() { return ['code', 'offset']; }
 
-    attributeChangedCallback(attribute, previousValue, currentValue) {
-        switch (attribute) {
-            case 'code':
-                this.#icon.innerHTML = `&${currentValue};`;
-                break;
-            case 'offset':
-                this.#icon.style.top = currentValue;
-                break;
-        }
+    codeAttributeChanged(attribute, previousValue, currentValue) {
+        this.#icon.innerHTML = `&${currentValue};`;
+    }
+
+    offsetAttributeChanged(attribute, previousValue, currentValue) {
+        this.#icon.style.top = currentValue;
     }
 }
 
