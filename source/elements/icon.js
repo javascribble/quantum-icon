@@ -1,4 +1,3 @@
-import { Component, template, define } from '../import.js';
 import html from '../templates/icon.js';
 
 export class Icon extends Component {
@@ -14,12 +13,15 @@ export class Icon extends Component {
 
     static get observedAttributes() { return ['code', 'offset']; }
 
-    codeAttributeChanged(attribute, previousValue, currentValue) {
-        this.#icon.innerHTML = `&${currentValue};`;
-    }
-
-    offsetAttributeChanged(attribute, previousValue, currentValue) {
-        this.#icon.style.top = currentValue;
+    attributeChangedCallback(attribute, previousValue, currentValue) {
+        switch (attribute) {
+            case 'code':
+                this.#icon.innerHTML = `&${currentValue};`;
+                break;
+            case 'offset':
+                this.#icon.style.top = currentValue;
+                break;
+        }
     }
 }
 

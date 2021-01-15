@@ -1,1 +1,3 @@
-export * from './elements/icon.js';
+import * as icon from './elements/icon.js';
+
+Object.assign(window, icon);
