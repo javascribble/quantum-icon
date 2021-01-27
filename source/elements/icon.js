@@ -1,5 +1,7 @@
 import html from '../templates/icon.js';
 
+const { Component, template, define } = quantum;
+
 export class Icon extends Component {
     #icon;
 
