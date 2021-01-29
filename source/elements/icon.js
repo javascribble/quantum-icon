@@ -1,17 +1,11 @@
 import html from '../templates/icon.js';
 
-const { Component, template, define } = quantum;
-
-export class Icon extends Component {
-    #icon;
+export class Icon extends Quantum {
+    #icon = this.shadowRoot.querySelector('span');
 
     constructor() {
         super();
-
-        this.#icon = this.shadowRoot.querySelector('span');
     }
-
-    static template = template(html);
 
     static get observedAttributes() { return ['code', 'offset']; }
 
@@ -27,4 +21,4 @@ export class Icon extends Component {
     }
 }
 
-define('quantum-icon', Icon);
+Icon.define('quantum-icon', html);

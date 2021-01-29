@@ -1,3 +1,3 @@
-import * as icon from './elements/icon.js';
+import { Icon } from './elements/icon.js';
 
-Object.assign(quantum, icon);
+Quantum.Icon = Icon;
