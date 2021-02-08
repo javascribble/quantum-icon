@@ -1,3 +1,1 @@
-import { Icon } from './elements/icon.js';
-
-Quantum.Icon = Icon;
+import './elements/icon.js';
