@@ -1,3 +1,5 @@
+import icon from '../templates/icon.js';
+
 export class Icon extends Quantum {
     #icon = this.shadowRoot.querySelector('span');
 
@@ -18,3 +20,5 @@ export class Icon extends Quantum {
         }
     }
 }
+
+Icon.define('quantum-icon', icon);
